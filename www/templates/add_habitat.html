@@ -1,0 +1,29 @@
+<ion-view view-title="Add Habitat" class="habitat">
+  <ion-content>
+  <div class="list card">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom">
+      <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+      </ui-gmap-marker>
+    </ui-gmap-google-map>
+  </div>
+  <div class="list">
+    <a class="item item-icon-left" href="#">
+    <i class="icon ion-location"></i>
+      Latitude {{lat}}
+    </a>
+    <a class="item item-icon-left" href="#">
+    <i class="icon ion-location"></i>
+      Longitude {{long}}
+    </a>
+    <label class="item item-input">
+      <input type="text" placeholder="Area">
+    </label>
+    <a class="item item-thumbnail-left" href="">
+      <img ng-src="{{photo}}"> 
+    </a>
+    <button class="button button-full button-balanced" ng-click="getPhoto()">
+    Add Photo  
+    </button>
+  </div>
+  </ion-content>
+</ion-view>
